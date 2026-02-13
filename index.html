@@ -175,24 +175,6 @@
     ⚡ 处理速度：3.45万包/秒 · Wireshark 同文件约 90秒+ · 适合存储厂商、网卡验证、超算中心场景
 </div>
 
-<div style="margin-top: 30px; padding: 20px; background: #f1f5f9; border-radius: 16px; text-align: center;">
-    <p style="margin-bottom: 16px; font-weight: 500;">📬 申请内测，成为第一批用户</p>
-    
-    <!-- 只有一个操作：复制 -->
-    <div style="background: white; padding: 12px; border-radius: 12px; border: 1px solid #e2e8f0;">
-        <span style="color: #475569; margin-right: 8px;">📧 邮箱：</span>
-        <code style="font-size: 1.2rem; background: #eef2f6; padding: 6px 12px; border-radius: 8px; font-weight: 500;">fj.zsy@163.com</code>
-        <button onclick="navigator.clipboard.writeText('fj.zsy@163.com').then(() => { this.innerText='已复制！'; setTimeout(() => this.innerText='复制', 2000); });" 
-                style="margin-left: 12px; background: #2563eb; color: white; border: none; padding: 8px 20px; border-radius: 100px; cursor: pointer; font-size: 0.95rem; font-weight: 500;">
-            复制
-        </button>
-    </div>
-    
-    <p style="color: #64748b; font-size: 0.9rem; margin-top: 16px;">
-        ⚡ 复制邮箱后，到你常用的邮箱粘贴发送即可
-    </p>
-</div>
-
 <div >
     <h3 style="margin-top: 0; margin-bottom: 20px; font-weight: 600; font-size: 1.2rem;"> 工具截图</h3>
 </div>
@@ -201,7 +183,59 @@
 </div>
 <div style="margin: 30px 0; box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1); border-radius: 16px; overflow: hidden;">
     <img src="rocev2pcap_report2.png" alt="RoCEv2 分析器报告输出" style="width: 100%; display: block;">
-</div>   
+</div>  
+
+<div style="margin-top: 30px; padding: 25px; background: #f1f5f9; border-radius: 20px; text-align: center;">
+    <p style="margin-bottom: 16px; font-size: 1.1rem; font-weight: 600;">🚀 申请内测，成为第一批用户</p>
+    
+    <!-- 复制区域 -->
+    <div style="background: white; padding: 15px; border-radius: 16px; border: 1px solid #e2e8f0; margin-bottom: 16px;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+            <span style="color: #475569;">📧 内测邮箱：</span>
+            <code style="font-size: 1.2rem; background: #eef2f6; padding: 8px 16px; border-radius: 40px; font-weight: 500; letter-spacing: 0.5px;">fj.zsy@163.com</code>
+            <button onclick="navigator.clipboard.writeText('fj.zsy@163.com').then(() => { this.innerText='已复制 ✓'; setTimeout(() => this.innerText='复制邮箱', 2000); });" 
+                    style="background: #2563eb; color: white; border: none; padding: 8px 24px; border-radius: 40px; cursor: pointer; font-size: 0.95rem; font-weight: 500; border: 1px solid #2563eb;">
+                📋 复制邮箱
+            </button>
+        </div>
+    </div>
+    
+    <!-- 明确的三步指引 -->
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 20px 0; text-align: left;">
+        <div style="background: white; padding: 15px; border-radius: 16px; flex: 1; min-width: 150px;">
+            <span style="background: #2563eb; color: white; width: 24px; height: 24px; display: inline-block; text-align: center; line-height: 24px; border-radius: 100px; margin-right: 8px;">1</span>
+            <strong>点击“复制邮箱”</strong>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 8px; margin-bottom: 0;">邮箱地址已到剪贴板</p>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 16px; flex: 1; min-width: 150px;">
+            <span style="background: #2563eb; color: white; width: 24px; height: 24px; display: inline-block; text-align: center; line-height: 24px; border-radius: 100px; margin-right: 8px;">2</span>
+            <strong>打开你的邮箱</strong>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 8px; margin-bottom: 0;">163/QQ/Gmail/企业邮箱</p>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 16px; flex: 1; min-width: 150px;">
+            <span style="background: #2563eb; color: white; width: 24px; height: 24px; display: inline-block; text-align: center; line-height: 24px; border-radius: 100px; margin-right: 8px;">3</span>
+            <strong>粘贴发送</strong>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 8px; margin-bottom: 0;">告诉我们你的使用场景</p>
+        </div>
+    </div>
+    
+    <!-- 邮件模板示例（降低思考成本） -->
+    <div style="background: white; padding: 15px; border-radius: 16px; text-align: left; font-size: 0.9rem; border: 1px dashed #94a3b8;">
+        <p style="margin: 0 0 8px 0; color: #475569;">📝 <strong>邮件可以这样写（复制即用）：</strong></p>
+        <code style="background: #f8fafc; padding: 12px; display: block; border-radius: 12px; color: #0f172a;">
+主题：申请试用RoCEv2分析器<br><br>
+你好，<br>
+我在rocetest.com看到你的工具，想申请试用。<br><br>
+我的使用场景：__________<br>
+联系方式：__________
+        </code>
+        <p style="margin-top: 12px; color: #2563eb; font-size: 0.85rem;">👆 复制这段文字，填一下场景和联系方式即可</p>
+    </div>
+    
+    <p style="color: #64748b; font-size: 0.9rem; margin-top: 20px;">
+        ⚡ 收到邮件后，我会在24小时内回复
+    </p>
+</div>
 
 </body>
 </html>
