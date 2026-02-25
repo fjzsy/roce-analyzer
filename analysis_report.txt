@@ -1,0 +1,1479 @@
+===================================================
+              RoCEv2 PCAP 分析报告
+
+ Pcap文件：D:/rdmadata/rdma2-rxe-r6.18-tmp-10.pcap
+===================================================
+
+📊 总体统计
+────────────────────────────────────────────
+  ├─ 总包数: 75659
+  ├─ 总流量: 38662474 bytes
+  └─ 分析耗时: 76 ms
+
+📦 协议分布
+────────────────────────────────────────────
+  ├─ RoCEv2包: 75655
+  ├─ 其他UDP包: 0
+  ├─ TCP包: 0
+  ├─ ICMP包: 0
+  ├─ ARP包: 4
+  ├─ IP分片包: 0
+  └─ 带选项的IP包: 0
+
+🎯 RoCEv2 操作码分布
+────────────────────────────────────────────
+QP 1:
+    └─  SEND_ONLY (0x64): 5
+QP 25:
+    ├─  SEND_ONLY (0x04): 176
+    └─  RDMA_READ_RESP_FIRST (0x11): 25034
+QP 88:
+    ├─  SEND_FIRST (0x00): 25048
+    ├─  SEND_LAST (0x02): 25048
+    ├─  SEND_ONLY (0x04): 168
+    └─  RDMA_READ_RESP_FIRST (0x11): 176
+
+📊 流统计（按五元组）
+────────────────────────────────────────────────────────────
+源IP	 源端口	 目的IP	 目的端口	QP	操作码	包数	PSN范围		丢包率
+────────────────────────────────────────────────────────────
+10.123.102.4	63130	10.123.102.5	4791	88	0x2	25048	15384133 → 15434368	0.00%
+10.123.102.4	63130	10.123.102.5	4791	88	0x0	25048	15384132 → 15434367	0.00%
+10.123.102.5	59581	10.123.102.4	4791	25	0x11	25034	15384123 → 15434386	0.00%
+10.123.102.5	59581	10.123.102.4	4791	25	0x4	176	16265223 → 16265398	0.00%
+10.123.102.4	63130	10.123.102.5	4791	88	0x11	176	16265223 → 16265398	0.00%
+10.123.102.4	63130	10.123.102.5	4791	88	0x4	168	15384123 → 15434386	0.00%
+10.123.102.4	55410	10.123.102.5	4791	1	0x64	3	24 → 26	0.00%
+10.123.102.5	49152	10.123.102.4	4791	1	0x64	2	155 → 156	0.00%
+
+⚠️ 异常统计
+----------------------------------------
+  无异常
+
+📦 采样包详情 (RoCEv2)
+────────────────────────────────────────────
+Packet #1000
+────────────────────────
+时间戳: 1765446047959863
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15384772
+
+Packet #2000
+────────────────────────
+时间戳: 1765446047968434
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15385437
+
+Packet #3000
+────────────────────────
+时间戳: 1765446047997523
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15386100
+
+Packet #4000
+────────────────────────
+时间戳: 1765446048006134
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15386763
+
+Packet #5000
+────────────────────────
+时间戳: 1765446048016550
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15387426
+
+Packet #6000
+────────────────────────
+时间戳: 1765446048026863
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15388090
+
+Packet #7000
+────────────────────────
+时间戳: 1765446048034442
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15388788
+
+Packet #8000
+────────────────────────
+时间戳: 1765446048042031
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15389457
+
+Packet #9000
+────────────────────────
+时间戳: 1765446048048803
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15390120
+
+Packet #10000
+────────────────────────
+时间戳: 1765446048056719
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15390787
+
+Packet #11000
+────────────────────────
+时间戳: 1765446048063810
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15391453
+
+Packet #12000
+────────────────────────
+时间戳: 1765446048071363
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15392115
+
+Packet #13000
+────────────────────────
+时间戳: 1765446048079314
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15392781
+
+Packet #14000
+────────────────────────
+时间戳: 1765446048086832
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15393448
+
+Packet #15000
+────────────────────────
+时间戳: 1765446048095052
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15394107
+
+Packet #16000
+────────────────────────
+时间戳: 1765446048102253
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15394769
+
+Packet #17000
+────────────────────────
+时间戳: 1765446048110622
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15395433
+
+Packet #18000
+────────────────────────
+时间戳: 1765446048119125
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15396096
+
+Packet #19000
+────────────────────────
+时间戳: 1765446048127985
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15396758
+
+Packet #20000
+────────────────────────
+时间戳: 1765446048134360
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15397441
+
+Packet #21000
+────────────────────────
+时间戳: 1765446048141475
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15398100
+
+Packet #22000
+────────────────────────
+时间戳: 1765446048149687
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15398764
+
+Packet #23000
+────────────────────────
+时间戳: 1765446048157034
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15399430
+
+Packet #24000
+────────────────────────
+时间戳: 1765446048164407
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15400097
+
+Packet #25000
+────────────────────────
+时间戳: 1765446048171386
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15400759
+
+Packet #26000
+────────────────────────
+时间戳: 1765446048179481
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15401423
+
+Packet #27000
+────────────────────────
+时间戳: 1765446048185977
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15402113
+
+Packet #28000
+────────────────────────
+时间戳: 1765446048193049
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15402778
+
+Packet #29000
+────────────────────────
+时间戳: 1765446048201427
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15403457
+
+Packet #30000
+────────────────────────
+时间戳: 1765446048208384
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15404116
+
+Packet #31000
+────────────────────────
+时间戳: 1765446048217240
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15404779
+
+Packet #32000
+────────────────────────
+时间戳: 1765446048223959
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15405446
+
+Packet #33000
+────────────────────────
+时间戳: 1765446048231920
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15406101
+
+Packet #34000
+────────────────────────
+时间戳: 1765446048238695
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15406770
+
+Packet #35000
+────────────────────────
+时间戳: 1765446048245792
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15407426
+
+Packet #36000
+────────────────────────
+时间戳: 1765446048253524
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15408093
+
+Packet #37000
+────────────────────────
+时间戳: 1765446048260662
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15408763
+
+Packet #38000
+────────────────────────
+时间戳: 1765446048268488
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15409424
+
+Packet #39000
+────────────────────────
+时间戳: 1765446048275571
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15410087
+
+Packet #40000
+────────────────────────
+时间戳: 1765446048282314
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15410750
+
+Packet #41000
+────────────────────────
+时间戳: 1765446048291470
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15411413
+
+Packet #42000
+────────────────────────
+时间戳: 1765446048298342
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15412074
+
+Packet #43000
+────────────────────────
+时间戳: 1765446048308897
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15412739
+
+Packet #44000
+────────────────────────
+时间戳: 1765446048317892
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15413403
+
+Packet #45000
+────────────────────────
+时间戳: 1765446048329923
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15414065
+
+Packet #46000
+────────────────────────
+时间戳: 1765446048337033
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15414729
+
+Packet #47000
+────────────────────────
+时间戳: 1765446048344923
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15415392
+
+Packet #48000
+────────────────────────
+时间戳: 1765446048354281
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15416057
+
+Packet #49000
+────────────────────────
+时间戳: 1765446048361137
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15416719
+
+Packet #50000
+────────────────────────
+时间戳: 1765446048371684
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15417384
+
+Packet #51000
+────────────────────────
+时间戳: 1765446048380133
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15418045
+
+Packet #52000
+────────────────────────
+时间戳: 1765446048389974
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15418708
+
+Packet #53000
+────────────────────────
+时间戳: 1765446048396610
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15419375
+
+Packet #54000
+────────────────────────
+时间戳: 1765446048405208
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15420035
+
+Packet #55000
+────────────────────────
+时间戳: 1765446048415981
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15420700
+
+Packet #56000
+────────────────────────
+时间戳: 1765446048424525
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15421355
+
+Packet #57000
+────────────────────────
+时间戳: 1765446048435155
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15422024
+
+Packet #58000
+────────────────────────
+时间戳: 1765446048443159
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15422683
+
+Packet #59000
+────────────────────────
+时间戳: 1765446048452393
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15423353
+
+Packet #60000
+────────────────────────
+时间戳: 1765446048461521
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15424014
+
+Packet #61000
+────────────────────────
+时间戳: 1765446048469411
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15424678
+
+Packet #62000
+────────────────────────
+时间戳: 1765446048478023
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15425340
+
+Packet #63000
+────────────────────────
+时间戳: 1765446048484794
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15426007
+
+Packet #64000
+────────────────────────
+时间戳: 1765446048493991
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15426669
+
+Packet #65000
+────────────────────────
+时间戳: 1765446048503032
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15427330
+
+Packet #66000
+────────────────────────
+时间戳: 1765446048510786
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15427997
+
+Packet #67000
+────────────────────────
+时间戳: 1765446048520230
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15428659
+
+Packet #68000
+────────────────────────
+时间戳: 1765446048527193
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15429322
+
+Packet #69000
+────────────────────────
+时间戳: 1765446048536912
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15429983
+
+Packet #70000
+────────────────────────
+时间戳: 1765446048543836
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15430647
+
+Packet #71000
+────────────────────────
+时间戳: 1765446048552809
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15431308
+
+Packet #72000
+────────────────────────
+时间戳: 1765446048559558
+包大小: 1082 bytes
+
+[BTH 头部]
+  Opcode: SEND_FIRST (0x00)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): No
+  PSN: 15431974
+
+Packet #73000
+────────────────────────
+时间戳: 1765446048566634
+包大小: 398 bytes
+
+[BTH 头部]
+  Opcode: SEND_LAST (0x02)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 88
+  A (AckReq): Yes
+  PSN: 15432639
+
+Packet #74000
+────────────────────────
+时间戳: 1765446048575778
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15433296
+
+Packet #75000
+────────────────────────
+时间戳: 1765446048582905
+包大小: 62 bytes
+
+[BTH 头部]
+  Opcode: RDMA_READ_RESP_FIRST (0x11)
+  S (Solicited): No
+  M (MigReq): No
+  Pad Count: 0
+  Version: 0
+  Partition Key: 0xffff
+  FECN: No
+  BECN: No
+  DQPN: No
+  QP Number: 25
+  A (AckReq): No
+  PSN: 15433953
+
